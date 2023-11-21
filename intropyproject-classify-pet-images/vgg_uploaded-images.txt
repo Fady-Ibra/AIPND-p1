@@ -1,0 +1,77 @@
+Command Line Arguments: 
+ dir =uploaded_images/
+ arch =vgg
+ dogfile =dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:      german_shepherd_dog_2.jpg  label:        german shepherd dog
+ 2 key:                 coffee_Mug.jpg  label:                     coffee
+ 3 key:                 black_bear.jpg  label:                      black
+ 4 key:        german_shepherd_dog.jpg  label:            german shepherd
+
+     MATCH:
+
+                coffee_Mug.jpg: 
+Real:                     coffee   Classifier:                     coffee mug
+
+                black_bear.jpg: 
+Real:                      black   Classifier: american black bear, black bear, ursus americanus, euarctos americanus
+
+       german_shepherd_dog.jpg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian
+
+ NOT A MATCH:
+
+     german_shepherd_dog_2.jpg: 
+Real:        german shepherd dog   Classifier:   norwegian elkhound, elkhound
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+     MATCH:
+
+                coffee_Mug.jpg: 
+Real:                     coffee   Classifier:                     coffee mug  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                black_bear.jpg: 
+Real:                      black   Classifier: american black bear, black bear, ursus americanus, euarctos americanus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+       german_shepherd_dog.jpg: 
+Real:            german shepherd   Classifier: german shepherd, german shepherd dog, german police dog, alsatian  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+     german_shepherd_dog_2.jpg: 
+Real:        german shepherd dog   Classifier:   norwegian elkhound, elkhound  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 3 # NOT Matches: 1
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  1  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  1  N NotDog Images:  3 
+Pct Corr dog: 100.0 Pct Corr NOTdog:  66.7  Pct Corr Breed:   0.0
+
+*** Results Summary for CNN Model Architecture: VGG ***
+***********************************************************************
+N Images            :   4
+N Dog Images        :   1
+N Not-Dog Images    :   3
+pct_match           : 75.000000
+pct_correct_dogs    : 100.000000
+pct_correct_breed   : 0.000000
+pct_correct_notdogs : 66.666667
+
+Misclassified Dogs
+                   german shepherd is classified as not a dog
+Misclassified Dog Breeds
+               german shepherd dog is classified as: norwegian elkhound, elkhound
+***********************************************************************
+
+** Total Elapsed Runtime: 0: 0: 1
